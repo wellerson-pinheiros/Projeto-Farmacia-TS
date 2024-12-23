@@ -1,5 +1,75 @@
+# Sistema de Gestão de Produtos Farmacêuticos ![Logo farmacia]( https://img.icons8.com/?size=100&id=LGEUYKE1dyZg&format=png&color=000000)
+
+Este projeto é um sistema simples de gestão de produtos farmacêuticos utilizando **TypeScript** e **Programação Orientada a Objetos (POO)**. 
+O sistema oferece funcionalidades de **CRUD (Criar, Ler, Atualizar e Deletar)** para os produtos, com controle de tipo de produto (como medicamentos e cosméticos).
+
+## Funcionalidades
+
+- **Criar Produto**: O sistema permite adicionar um novo produto à lista, atribuindo um ID automaticamente.
+- **Listar Todos os Produtos**: Exibe todos os produtos cadastrados.
+- **Consultar Produto por ID**: Permite consultar um produto específico através do seu ID.
+- **Atualizar Produto**: Atualiza os detalhes de um produto existente com base no ID.
+- **Deletar Produto**: Remove um produto da lista com base no seu ID.
+
+Essas funcionalidades são implementadas através dos seguintes métodos:
+
+- **`criarProduto(produto: Produto): void`**: Cria um novo produto e o adiciona à lista.
+- **`listarTodosOsProdutos(): void`**: Lista todos os produtos cadastrados.
+- **`consultarProdutoPorId(id: number): void`**: Exibe as informações de um produto específico com base no ID.
+- **`atualizarProduto(id: number, produto: Produto): void`**: Atualiza as informações de um produto já existente.
+- **`deletarProduto(id: number): void`**: Deleta um produto da lista com o ID fornecido.
+
+## Tecnologias
+
+- **TypeScript**: Utilizado para garantir tipagem estática e maior controle de erros durante o desenvolvimento.
+- **POO (Programação Orientada a Objetos)**: Para estruturar e organizar melhor o código, garantindo escalabilidade e manutenção mais fácil.
 
 
-## Sistema de Gestão de Produtos Farmacêuticos <img src/im
+## O sistema permite:
 
-Este projeto é um sistema simples de gestão de produtos farmacêuticos utilizando TypeScript e Programação Orientada a Objetos (POO). O sistema oferece funcionalidades de CRUD (Criar, Ler, Atualizar e Deletar) para os produtos, com controle de tipo de produto (como medicamentos e cosméticos).
+Cadastro e Gerenciamento de Medicamentos e Cosméticos
+Operações de CRUD para medicamentos e cosméticos
+Controle de Estoque e Preços
+Interação com o usuário através de um Controller para realizar operações simples
+Arquitetura
+A arquitetura do sistema é baseada em uma classe abstrata principal, chamada Conta, que serve como base para os dois tipos principais de produtos: Medicamentos e Cosméticos. O sistema segue os princípios de Orientação a Objetos e é construído de maneira modular.
+
+Estrutura
+Conta (Classe Abstrata): Classe base para medicamentos e cosméticos.
+Medicamento (Herança de Conta): Representa medicamentos específicos.
+Cosmetico (Herança de Conta): Representa cosméticos específicos.
+ContaRepository (CRUD): Responsável pelas operações de armazenamento e manipulação dos dados das contas.
+ContaController (Interações): Controlador que gerencia as interações do usuário com o sistema, acionando as operações de CRUD de medicamentos e cosméticos.
+
+
+
+
+
+
+### ProdutoController
+
+O **ProdutoController** é responsável por gerenciar as operações CRUD (Criar, Listar, Consultar, Atualizar e Deletar) dos produtos. Ele implementa a interface `ProdutoRepository`.
+
+- **`criarProduto(produto: Produto): void`**  
+  Adiciona um novo produto à lista de produtos. O produto é inserido com um ID gerado automaticamente.
+
+- **`listarTodosOsProdutos(): void`**  
+  Retorna todos os produtos cadastrados. Exibe a lista completa de produtos.
+
+- **`consultarProdutoPorId(id: number): void`**  
+  Consulta e exibe um produto específico com base no seu ID. Se o produto for encontrado, suas informações são exibidas no console. Caso contrário, uma mensagem de erro será exibida.
+
+- **`atualizarProduto(id: number, produto: Produto): void`**  
+  Atualiza as informações de um produto existente com base no ID fornecido. O método pode ser implementado para permitir modificações nos dados do produto.
+
+- **`deletarProduto(id: number): void`**  
+  Deleta um produto da lista utilizando o ID fornecido. Caso o produto seja encontrado, ele é removido da lista. Se o produto não for encontrado, será exibida uma mensagem de erro.
+
+---
+
+##Diagrama de Classes
+
+![Diagrama de Classes](https://github.com/wellerson-pinheiros/Projeto-Farmacia-TS/blob/main/src/util/imgs/Diagrama%20de%20classes.PNG)
+
+##Contribuições
+Se você deseja contribuir com o projeto, fique à vontade para abrir issues ou enviar pull requests. Sua contribuição é muito bem-vinda!

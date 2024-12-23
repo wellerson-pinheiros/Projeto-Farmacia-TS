@@ -1,0 +1,5 @@
+
+
+## Sistema de Gestão de Produtos Farmacêuticos <img src/im
+
+Este projeto é um sistema simples de gestão de produtos farmacêuticos utilizando TypeScript e Programação Orientada a Objetos (POO). O sistema oferece funcionalidades de CRUD (Criar, Ler, Atualizar e Deletar) para os produtos, com controle de tipo de produto (como medicamentos e cosméticos).
